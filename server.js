@@ -5,13 +5,13 @@ const db = require('./db/connection');
 // Start server after DB connection
 db.connect(err => {
     if (err) throw err;
-    console.log('WELCOME TO BLUELIGHT SUITES EMPLOYEE DATABASE.');
+    console.log('WELCOME TO BLUELIGHT SUITES EMPLOYEE TRACKER DATABASE.');
     employee_tracker();
 });
 
 var employee_tracker = function () {
     inquirer.prompt([{
-        // Begin Command Line
+        // Begin Command Line Prompts
         type: 'list',
         name: 'prompt',
         message: 'What would you like to do?',
@@ -41,7 +41,7 @@ var employee_tracker = function () {
             });
         } else if (answers.prompt === 'Add A Department') {
             inquirer.prompt([{
-                // Adding a Department
+                // Adding a Department to the Database
                 type: 'input',
                 name: 'department',
                 message: 'What is the name of the dpeartment?',
@@ -67,7 +67,7 @@ var employee_tracker = function () {
 
                 inquirer.prompt([
                     {
-                        // Adding a role
+                        // Adding a role to the database
                         type: 'input',
                         name: 'role',
                         message: 'What is the name of the role?',
@@ -81,7 +81,7 @@ var employee_tracker = function () {
                         }
                     },
                     {
-                        // Adding the Salary
+                        // Adding the Salary for the role to the database
                         type: 'input',
                         name: 'salary',
                         message: 'What is the salary of the role?',
@@ -95,7 +95,7 @@ var employee_tracker = function () {
                         }
                     },
                     {
-                        // Designated Department for the said role 
+                        // Designated Department for the said role to the database
                         type: 'list',
                         name: 'department',
                         message: 'Which department does the role belong to?',
@@ -129,7 +129,7 @@ var employee_tracker = function () {
 
                 inquirer.prompt([
                     {
-                        // Adding Employee First Name
+                        // Adding Employee First Name to the Database
                         type: 'input',
                         name: 'firstName',
                         message: 'What is the employees first name?',
@@ -143,7 +143,7 @@ var employee_tracker = function () {
                         }
                     },
                     {
-                        // Adding Employee Last Name
+                        // Adding Employee Last Name to the Database
                         type: 'input',
                         name: 'lastName',
                         message: 'What is the employees last name?',
@@ -157,7 +157,7 @@ var employee_tracker = function () {
                         }
                     },
                     {
-                        // Adding Employee Role
+                        // Adding Employee Role to the Database
                         type: 'list',
                         name: 'role',
                         message: 'What is the employees role?',
@@ -171,7 +171,7 @@ var employee_tracker = function () {
                         }
                     },
                     {
-                        // Adding Employee Manager
+                        // Adding Employee Manager for the said role to the Database
                         type: 'input',
                         name: 'manager',
                         message: 'Who is the employees manager?',
@@ -200,7 +200,7 @@ var employee_tracker = function () {
                 })
             });
         } else if (answers.prompt === 'Update An Employee Role') {
-            // Calling the database to acquire the roles and managers
+            // Calling the database to acquire the roles and managers for the choice
             db.query(`SELECT * FROM employee, role`, (err, result) => {
                 if (err) throw err;
 
@@ -220,7 +220,7 @@ var employee_tracker = function () {
                         }
                     },
                     {
-                        // Updating the New Role
+                        // Updating the New Role for the Employee to the Database
                         type: 'list',
                         name: 'role',
                         message: 'What is their new role?',
@@ -256,7 +256,14 @@ var employee_tracker = function () {
             });
         } else if (answers.prompt === 'Log Out') {
             db.end();
-            console.log("Good-Bye!");
+            console.log("-------------------------------------------------");
+console.log("Thank you for using the Employee Tracker App!");
+console.log();
+console.log("I appreciate your time and hope you found the application useful. If you have any feedback or suggestions for improvement, please don't hesitate to let us know. Your input helps us make the app even better!");
+console.log();
+console.log("Have a fantastic day!");
+console.log("✨  Every day is a learning day!  ✨");
+
         }
     })
 };

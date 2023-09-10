@@ -9,4 +9,4 @@ password: process.env.DB_PASSWORD,
 database: process.env.DB_NAME
 });
 
-module.exports = db; // export connection
+module.exports = db; // Export connection
