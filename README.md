@@ -189,8 +189,6 @@ Have additional questions? Click the links below to reach me through my GitHub a
 
 Click: <a href = "https://github.com/abdulsamedtma/employee-tracker"> Repository URL </a>
 
-Click: <a href="https://drive.google.com/file/d/1zCyat_HBIsSN-PXqt8ckT0XQZG0EpZiu/view"> Deployed App on Github </a>
-
-Click to watch walkthrough video: <a href = ""> Watch walkthrough video </a>
+Click to watch walkthrough video: <a href = "https://drive.google.com/file/d/1zCyat_HBIsSN-PXqt8ckT0XQZG0EpZiu/view"> Watch walkthrough video </a>
 
                   This Employee Tracker App was created with ❤️ by Abdul. ✨  Every day is a learning day!  ✨
