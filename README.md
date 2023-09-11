@@ -68,7 +68,7 @@ To install the Employee Tracker App, you'll need to follow these general steps:
 1. **Clone or Download the Application:**
    - Clone the Repository: Open your terminal and navigate to the directory where you want to install the Employee tracker App.Then, run the following command to clone the repository: 
      ```
-     git clone <git@github.com:abdulsamedtma/note-taker-app.git>
+     git clone <git@github.com:abdulsamedtma/employee-tracker.git>
      ```
   
 2. **Install Node.js and npm:**
@@ -189,7 +189,7 @@ Have additional questions? Click the links below to reach me through my GitHub a
 
 Click: <a href = "https://github.com/abdulsamedtma/employee-tracker"> Repository URL </a>
 
-Click: <a href=""> Deployed App on Github </a>
+Click: <a href="https://drive.google.com/file/d/1zCyat_HBIsSN-PXqt8ckT0XQZG0EpZiu/view"> Deployed App on Github </a>
 
 Click to watch walkthrough video: <a href = ""> Watch walkthrough video </a>
 
