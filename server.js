@@ -126,8 +126,8 @@ function addEmployee(roles, employees) {
       choices: employees,
     },
   ]).then((answers) => {
-    const roleId = roles.indexOf(answers.role) + 1;
-    const managerId = employees.indexOf(answers.manager) + 1;
+    const roleId = roles.indexOf(answers.role) + 1; // Get the role ID
+    const managerId = employees.indexOf(answers.manager) + 1; // Get the manager ID
     db.query(`INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)`, [answers.firstName, answers.lastName, roleId, managerId], (err, result) => {
       if (err) throw err;
       console.log(`Added ${answers.firstName} ${answers.lastName} to the database.`);
@@ -152,7 +152,7 @@ function updateEmployeeRole(employees, roles) {
       choices: roles,
     },
   ]).then((answers) => {
-    const employeeId = employees.indexOf(answers.employee) + 1;
+    const employeeId = employees.indexOf(answers.employee) + 1; // Get the employee ID
     const roleId = roles.indexOf(answers.role) + 1;
     db.query(`UPDATE employee SET role_id = ? WHERE id = ?`, [roleId, employeeId], (err, result) => {
       if (err) throw err;
@@ -242,7 +242,7 @@ async function employeeTracker() {
       if (err) throw err;
       roles = roles.map((role) => role.title);
 
-      db.query(`SELECT * FROM employee`, async (err, employees) => {
+      db.query(`SELECT * FROM employee`, async (err, employees) => { 
         if (err) throw err;
         employees = employees.map((employee) => `${employee.first_name} ${employee.last_name}`);
 
@@ -266,39 +266,39 @@ async function employeeTracker() {
             ],
           },
         ]);
-
+// Switch statement to handle user choices
         switch (prompt) {
-          case 'View All Departments':
+          case 'View All Departments': // View all departments
             viewDepartments();
             break;
-          case 'View All Roles':
+          case 'View All Roles': // View all roles
             viewRoles();
             break;
-          case 'View All Employees':
+          case 'View All Employees': // View all employees
             viewEmployees();
             break;
-          case 'Add A Department':
+          case 'Add A Department': // Add a department
             addDepartment();
             break;
-          case 'Add A Role':
+          case 'Add A Role':   // Add a role
             addRole(departments);
             break;
-          case 'Add An Employee':
+          case 'Add An Employee': // Add an employee
             addEmployee(roles, employees);
             break;
-          case 'Update An Employee Role':
+          case 'Update An Employee Role': // Update an employee's role
             updateEmployeeRole(employees, roles);
             break;
-          case 'Delete A Department':
+          case 'Delete A Department': // Delete a department
             deleteDepartment();
             break;
-          case 'Delete An Employee':
+          case 'Delete An Employee': // Delete an employee
             deleteEmployee();
             break;
-          case 'Delete A Role':
+          case 'Delete A Role': // Delete a role
             deleteRole();
             break;
-          case 'Log Out':
+          case 'Log Out': // Exit the application
             db.end();
             console.log('-------------------------------------------------');
             console.log('Thank you for using the Employee Tracker App!');
