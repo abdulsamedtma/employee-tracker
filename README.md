@@ -20,6 +20,7 @@
 - [Usage](#usage)
 - [Testing](#testing)
 - [Contributing](#contributing)
+- [Future Enhancements](#future-enhancements)  
 - [Questions](#questions)
 
 
@@ -121,8 +122,13 @@ To install the Employee Tracker App, you'll need to follow these general steps:
 
 ![Alt text](assets/images/view.Employee.png)
 
-![Alt text](assets/images/view.Role.png)
+![Alt text](assets/images/add-dept.png)
 
+![Alt text](assets/images/delete-dept.png)
+
+![Alt text](assets/images/add-newRole.png)
+
+![Alt text](assets/images/add-employee.png)
 
 ## Credit
 
@@ -139,6 +145,40 @@ NOTICE: This application is covered under the MIT License
 Open to collaboration, if you choose to do so open an issue and modify any changes you would like to see on a feature branch and wait for approval before merging to the main branch.
 Contributions are always welcome! But please read the contribution guidelines first on [Contributor Covenant](https://www.contributor-covenant.org/).  
 
+## Future Enhancements
+
+I have plans to enhance the BlueLight Suites Employee Tracker application with the following features in future updates:
+
+### 1. Update Employee Managers
+
+- Description: Allow users to update an employee's manager, providing greater flexibility in managing the organizational hierarchy.
+- Implementation: Will add a new function that prompts users to select an employee and assign a new manager to them.
+
+### 2. View Employees by Manager
+
+- Description: Enable users to view a list of employees managed by a specific manager.
+- Implementation: Will create a function that queries the database for employees under a given manager's supervision.
+
+### 3. View Employees by Department
+
+- Description: Provide the ability to see a list of employees within a particular department.
+- Implementation: Will implement a function that retrieves and displays employees based on their assigned department.
+
+### 4. Calculate Total Utilized Budget
+
+- Description: Calculate and display the total salary budget for a specific department, which is the sum of salaries for all employees in that department.
+- Implementation: Will create a function that calculates the budget by summing up salaries from the 'role' table based on department.
+
+### 5. Additional User Interface Improvements
+
+- Description: Enhance the user interface to improve the overall user experience.
+- Implementation: Will work on refining the command-line interface and adding more user-friendly features.
+
+These planned enhancements will add more value to the application, making it an even more powerful tool for managing employee information and organizational data.
+
+Please stay tuned for future updates and improvements!
+
+
 ## Questions
 
 Have additional questions? Click the links below to reach me through my GitHub account or Email address.
@@ -150,5 +190,7 @@ Have additional questions? Click the links below to reach me through my GitHub a
 Click: <a href = "https://github.com/abdulsamedtma/employee-tracker"> Repository URL </a>
 
 Click: <a href=""> Deployed App on Github </a>
+
+Click to watch walkthrough video: <a href = ""> Watch walkthrough video </a>
 
                   This Employee Tracker App was created with ❤️ by Abdul. ✨  Every day is a learning day!  ✨
