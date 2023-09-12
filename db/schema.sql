@@ -1,8 +1,8 @@
 --- Create a BLUE LIGHT SUITES EMLOYEE TRACKER database called `employee_tracker_db` and tables called `department`,
 -- `role`, and `employee` using the following schema:                                                                                                                                                                                                                                                                                                    
 
-DROP DATABASE IF EXISTS employee_tracker_db;
-CREATE DATABASE employee_tracker_db;
+DROP DATABASE IF EXISTS employee_tracker_db; 
+CREATE DATABASE employee_tracker_db;  -- Create the database name employee_tracker_db
 
 USE employee_tracker_db;
 
